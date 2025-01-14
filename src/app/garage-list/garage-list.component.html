@@ -1,0 +1,5 @@
+<div class="row row-cols-5">
+    @for (v of getMyVehicles(); track $index) {
+        <app-vehicle-card [vehicle]="v"/>
+    }
+</div>

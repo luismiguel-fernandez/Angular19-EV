@@ -1,15 +1,15 @@
 import { Routes } from '@angular/router';
-import { HomeSectionComponent } from './home-section/home-section.component';
-import { VehiclesSectionComponent } from './vehicles-section/vehicles-section.component';
-import { ManufacturersSectionComponent } from './manufacturers-section/manufacturers-section.component';
+import { EvSectionComponent } from './ev-section/ev-section.component';
+import { HomeComponent } from './home/home.component';
+import { MfSectionComponent } from './mf-section/mf-section.component';
 import { Page404SectionComponent } from './page404-section/page404-section.component';
-import { MyGarageSectionComponent } from './my-garage-section/my-garage-section.component';
+import { GarageSectionComponent } from './garage-section/garage-section.component';
 
 export const routes: Routes = [
-    { path: "home", component: HomeSectionComponent, title: "Home" },
-    { path: "vehicles", component: VehiclesSectionComponent, title: "Vehicles" },
-    { path: "manufacturers", component: ManufacturersSectionComponent, title: "Manufacturers" },
-    { path: "garage", component: MyGarageSectionComponent, title: "My garage" },
-    { path: '',   redirectTo: '/home', pathMatch: 'full' },
-    { path: "**", component: Page404SectionComponent, title: "URL NOT FOUND" }
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
+    {path: 'home', component: HomeComponent},
+    {path: 'vehicles', component: EvSectionComponent},
+    {path: 'manufacturers', component: MfSectionComponent},
+    {path: 'garage', component: GarageSectionComponent },
+    {path: '**', component: Page404SectionComponent}
 ];
